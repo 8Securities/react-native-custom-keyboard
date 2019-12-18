@@ -24,6 +24,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.UiThreadUtil;
 import com.facebook.react.bridge.WritableMap;
+import com.facebook.react.uimanager.NativeHelper;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 import com.facebook.react.views.textinput.ReactEditText;
 
@@ -46,9 +47,7 @@ public class CustomKeyboardModule extends ReactContextBaseJavaModule {
     Handler handle = new Handler(Looper.getMainLooper());
 
     private ReactEditText getEditById(int id) {
-        UIViewOperationQueue uii = this.getReactApplicationContext().getNativeModule(UIManagerModule.class).getUIImplementation().getUIViewOperationQueue();
-        Log.i("react-native", String.valueOf(id));
-        return (ReactEditText) uii.getNativeViewHierarchyManager().resolveView(id);
+        return NativeHelper.getEditById(this.getReactApplicationContext(), id);
     }
 
     @ReactMethod
