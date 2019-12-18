@@ -1,5 +1,16 @@
-import { NativeModules } from 'react-native';
+import { keyBoardAPI, CustomTextInput, height } from "./customKeyboard";
 
-const { CustomKeyboard } = NativeModules;
+import {
+  addKeyboardHideListener,
+  addKeyboardShowListener,
+  removeKeyboardListener
+} from "./keyboardEvents";
 
-export default CustomKeyboard;
+export {
+  addKeyboardHideListener,
+  removeKeyboardListener,
+  addKeyboardShowListener,
+  CustomTextInput,
+  keyBoardAPI,
+  height
+};

@@ -9,18 +9,16 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                   react-native-custom-keyboard
                    DESC
-  s.homepage     = "https://github.com/github_account/react-native-custom-keyboard"
+  s.homepage     = "https://github.com/8securities/react-native-custom-keyboard"
   s.license      = "MIT"
-  # s.license    = { :type => "MIT", :file => "FILE_LICENSE" }
   s.authors      = { "Your Name" => "yourname@email.com" }
   s.platforms    = { :ios => "9.0" }
-  s.source       = { :git => "https://github.com/github_account/react-native-custom-keyboard.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/8securities/react-native-custom-keyboard.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,swift}"
   s.requires_arc = true
 
   s.dependency "React"
-  # ...
-  # s.dependency "..."
+  s.dependency 'React-Core'
 end
 
