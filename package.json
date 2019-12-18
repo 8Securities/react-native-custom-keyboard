@@ -9,15 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/github_account/react-native-custom-keyboard.git",
-    "baseUrl": "https://github.com/github_account/react-native-custom-keyboard"
+    "url": "git+https://github.com/8securities/react-native-custom-keyboard.git",
+    "baseUrl": "https://github.com/8securities/react-native-custom-keyboard"
   },
   "keywords": [
     "react-native"
   ],
   "author": {
-    "name": "Your Name",
-    "email": "yourname@email.com"
+    "name": "8 Securities"
   },
   "license": "ISC",
   "licenseFilename": "LICENSE",

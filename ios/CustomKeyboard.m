@@ -5,7 +5,9 @@
 
 @implementation CustomKeyboard
 
-RCT_EXPORT_MODULE()
+@synthesize bridge = _bridge;
+
+RCT_EXPORT_MODULE(CustomKeyboard)
 
 - (dispatch_queue_t)methodQueue
 {
