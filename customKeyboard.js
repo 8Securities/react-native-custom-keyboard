@@ -8,7 +8,7 @@ import {
   AppState,
 } from 'react-native';
 import CustomKeyboardView from './CustomKeyboardView'
-import { 
+import {
   removeKeyboardListener,
 } from './keyboardEvents';
 
@@ -95,8 +95,8 @@ export class CustomTextInput extends React.Component {
 
   handleAppStateChange = (nextAppState) => {
     // Check keyboard
-    if (nextAppState === 'background' && TextInput.State.currentlyFocusedField() === findNodeHandle(this.input)) {
-      TextInput.State.blurTextInput(TextInput.State.currentlyFocusedField());
+    if (nextAppState === 'background' && TextInput.State.currentlyFocusedInput() === findNodeHandle(this.input)) {
+      TextInput.State.blurTextInput(TextInput.State.currentlyFocusedInput());
       return true;
     }
   }
