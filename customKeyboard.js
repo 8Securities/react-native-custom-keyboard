@@ -95,8 +95,8 @@ export class CustomTextInput extends React.Component {
 
   handleAppStateChange = (nextAppState) => {
     // Check keyboard
-    if (nextAppState === 'background' && TextInput.State.currentlyFocusedInput() === findNodeHandle(this.input)) {
-      TextInput.State.blurTextInput(TextInput.State.currentlyFocusedInput());
+    if (nextAppState === 'background' && findNodeHandle(TextInput.State.currentlyFocusedInput()) === findNodeHandle(this.input)) {
+      TextInput.State.blurTextInput(findNodeHandle(TextInput.State.currentlyFocusedInput()));
       return true;
     }
   }
